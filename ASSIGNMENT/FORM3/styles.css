@@ -1,0 +1,13 @@
+.form{
+    text-align: center;
+}
+body{
+    background-color: cornflowerblue;
+    margin: 0px;
+}
+h1{
+    background-color: cadetblue;
+    padding: 0%;
+    margin: 0px;
+    height: 50px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form to return first and last name</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="form">
+        <h1>A form to return first name and last name as alert</h1>
+        <form id="form1" onsubmit="getFormValues()">
+            First name: <input type="text" name="firstname" value="Jera"><br><br><br><br>
+            Last name: <input type="text" name="lastname" value="Brenda"><br><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    
+        <script>
+            function getFormValues() {
+                // Get the values of first and last name inputs
+                var firstName = document.getElementById('form1').elements['firstname'].value;
+                var lastName = document.getElementById('form1').elements['lastname'].value;
+    
+                // Display the values
+                alert("First name: " + firstName + "\nLast name: " + lastName);
+    
+                // Prevent form submission
+                return false;
+            }
+        </script>
+    </div>
+ </body>   
+<html>
+
