@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getMaxOfThreeNumbers(a, b, c) {
+            return Math.max(a, b, c);
+        }
+        
+        function getThreeNumbersAndFindMax() {
+            var num1 = parseFloat(prompt("Enter the first number:"));
+            var num2 = parseFloat(prompt("Enter the second number:"));
+            var num3 = parseFloat(prompt("Enter the third number:"));
+        
+            // Check if all inputs are valid numbers
+            if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
+                var maxNumber = getMaxOfThreeNumbers(num1, num2, num3);
+                alert("The maximum of the three numbers is: " + maxNumber);
+            } else {
+                alert("Please enter valid numbers.");
+            }
+        }
+        
+        // Call the function to prompt for inputs and find the maximum
+        getThreeNumbersAndFindMax();
+    </script>
+</body>
+</html>
+
+</body>
+</html>
