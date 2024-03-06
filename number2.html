@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Numbers</title>
+    <style>
+        body {
+            background-color: azure;
+        }
+        .bod{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bod">
+    <h1>Square Numbers</h1>
+    
+    <form id="squareForm">
+        <button type="button" onclick="squareNumbers()">Square Numbers from 1 to 10</button>
+    </form>
+
+    <div id="squaredNumbers"></div>
+</div>
+    <script>
+        function square(num) {
+            return num * num;
+        }
+
+        function squareNumbers() {
+            var squaredNumbersText = "";
+
+            for (var i = 1; i <= 10; i++) {
+                var squared = square(i);
+                squaredNumbersText += "Square of " + i + " is " + squared + "<br>";
+            }
+
+            document.getElementById("squaredNumbers").innerHTML = squaredNumbersText;
+        }
+    </script>
+</body>
+</html>

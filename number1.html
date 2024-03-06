@@ -3,36 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sum Calculator</title>
+    <style>
+        .bod{
+            text-align: center;
+        }
+        #num1{
+            border-radius: 20px;
+        }
+        #num2{
+            border-radius: 20px;
+        }
+        body{
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
+    <div class="bod">
+    <h1>Sum Calculator</h1>
+    
+    <form id="sumForm">
+        <label for="num1">Enter the first number:</label>
+        <input type="number" id="num1" name="num1" required><br><br><br>
         
-    </body>
+        <label for="num2">Enter the second number:</label>
+        <input type="number" id="num2" name="num2" required><br><br><br>
+        
+        <button type="button" onclick="calculateSum()">Calculate Sum</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
     <script>
-        function sum(a, b) {
-            return a + b;
-        }
-    
-        function square(num) {
-            return num * num;
-        }
-    
-        for (var i = 1; i <= 10; i++) {
-            var squared = square(i);
-            console.log("Square of " + i + " is " + squared);
+        function calculateSum() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            
+            if (!isNaN(num1) && !isNaN(num2)) {
+                var sum = num1 + num2;
+                document.getElementById("result").innerText = "The sum is: " + sum;
+            } else {
+                document.getElementById("result").innerText = "Please enter valid numbers.";
+            }
         }
     </script>
-    </html>
-      
 </body>
 </html>
-
-
